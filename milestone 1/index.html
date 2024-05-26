@@ -54,90 +54,24 @@
             </div>
             <div class="messages">
               <ul>
-                <li>
-                  <div class="content">
-                    <div class="card-image">
-                      <img class="avatar" src="img/avatar_2.jpg" alt="" />
+                <div id="app">
+                  <li v-for="contatto in contatti" :key="contatto.nome">
+                    <div class="content">
+                      <div class="card-image">
+                        <img
+                          class="avatar"
+                          :src="contatto.immagine"
+                          alt="Immagine contatto"
+                        />
+                      </div>
+                      <div class="text rem1">
+                        <div class="size14">{{ contatto.nome }}</div>
+                        <div class="grey-text">Lorem ipsum dolor sit amet</div>
+                      </div>
+                      <div class="text grey-text time">16:15</div>
                     </div>
-                    <div class="text rem1">
-                      <div class="size14">Aldo</div>
-                      <div class="grey-text">Lorem ipsum dolor sit amet</div>
-                    </div>
-                    <div class="text grey-text time">16:15</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="content">
-                    <div class="card-image">
-                      <img class="avatar" src="img/avatar_3.jpg" alt="" />
-                    </div>
-                    <div class="text rem1">
-                      <div class="size14">Giovanni</div>
-                      <div class="grey-text">Lorem ipsum dolor sit amet</div>
-                    </div>
-                    <div class="text grey-text time">16:15</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="content">
-                    <div class="card-image">
-                      <img class="avatar" src="img/avatar_4.jpg" alt="" />
-                    </div>
-                    <div class="text rem1">
-                      <div class="size14">Giacomo</div>
-                      <div class="grey-text">Lorem ipsum dolor sit amet</div>
-                    </div>
-                    <div class="text grey-text time">16:15</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="content">
-                    <div class="card-image">
-                      <img class="avatar" src="img/avatar_5.jpg" alt="" />
-                    </div>
-                    <div class="text rem1">
-                      <div class="size14">Michele</div>
-                      <div class="grey-text">Lorem ipsum dolor sit amet</div>
-                    </div>
-                    <div class="text grey-text time">16:15</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="content">
-                    <div class="card-image">
-                      <img class="avatar" src="img/avatar_6.jpg" alt="" />
-                    </div>
-                    <div class="text rem1">
-                      <div class="size14">Claudia</div>
-                      <div class="grey-text">Lorem ipsum dolor sit amet</div>
-                    </div>
-                    <div class="text grey-text time">16:15</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="content">
-                    <div class="card-image">
-                      <img class="avatar" src="img/avatar_7.jpg" alt="" />
-                    </div>
-                    <div class="text rem1">
-                      <div class="size14">Federico</div>
-                      <div class="grey-text">Lorem ipsum dolor sit amet</div>
-                    </div>
-                    <div class="text grey-text time">16:15</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="content">
-                    <div class="card-image">
-                      <img class="avatar" src="img/avatar_8.jpg" alt="" />
-                    </div>
-                    <div class="text rem1">
-                      <div class="size14">Davide</div>
-                      <div class="grey-text">Lorem ipsum dolor sit amet</div>
-                    </div>
-                    <div class="text grey-text time">16:15</div>
-                  </div>
-                </li>
+                  </li>
+                </div>
               </ul>
             </div>
           </div>
