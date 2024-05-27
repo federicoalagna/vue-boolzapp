@@ -19,7 +19,7 @@ const app = Vue.createApp({
                 },
                 {
                     date: '10/01/2020 16:15:22',
-                    message: 'Tutto fatto!',
+                    lastessage: 'Tutto fatto!',
                     status: 'received'
                 }
             ],
@@ -162,10 +162,30 @@ const app = Vue.createApp({
                     status: 'received'
                 }
             ],
+           
         }
+        
     ], 
-      contattoAttivo: null
+  
+      contattoAttivo: null,
+      searchQuery: '',
+      messaggiDelContattoAttivo: []
+
     };
+  
+  },
+  computed: {
+    contattiFiltrati() {
+      return this.contatti.filter(contatto =>
+        contatto.nome.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    },
+    contattiConUltimoMessaggio() {
+      return this.contatti.map(contatto => ({
+        ...contatto,
+        ultimoMessaggio: contatto.messages[contatto.messages.length - 1].message
+      }));
+    }
   },
 
     methods: {
@@ -175,6 +195,7 @@ const app = Vue.createApp({
     }
   
 });
+
 
 app.mount('#app');
 
